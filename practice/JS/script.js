@@ -75,11 +75,10 @@ let product = multiply(prompt("enter a number"), summ);
 console.log(product);
 
 function Average(n1, n2) {
-    return add(n1,n2) / 2;
+  return add(n1, n2) / 2;
 }
 let av = Average(4, 9);
 console.log(av);
-
 
 // ###################
 function mySecond(x) {
@@ -87,10 +86,9 @@ function mySecond(x) {
 }
 mySecond("yo");
 
-function myThird(x) { 
+function myThird(x) {
   let c = mySecond(x);
   console.log(c);
-  
 }
 myThird(6);
 
@@ -114,15 +112,28 @@ function myFifth(num) {
 myFifth([2, 4]);
 
 function addition(num) {
-	if(isNaN(num)){
-		return"enter a number only";
-	}
-	else{
+  if (isNaN(num)) {
+    return "enter a number only";
+  } else {
     let a = num + 1;
     return a;
-
-	}
+  }
 }
 console.log(addition(4));
 console.log(addition("yo"));
 console.log(addition(-3));
+
+// this  is ....
+
+const text = "Hello, welcome to JavaScript!";
+let index = 0;
+
+function typeEffect() {
+  if (index < text.length) {
+    document.getElementById("text").innerHTML += text.charAt(index);
+    index++;
+    setTimeout(typeEffect, 100);
+  }
+}
+
+typeEffect();
